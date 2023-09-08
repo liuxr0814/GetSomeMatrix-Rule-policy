@@ -1,0 +1,17 @@
+#!name = ScriptHub
+#!desc = https://script.hub
+#!author = 小白脸、xream、keywos、CKYB
+
+https?:\/\/script\.hub\/($|edit\/|reload) url script-request-header https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js
+
+https?:\/\/script\.hub\/file\/_start_\/.+type=qx-rewrite url script-request-header https://github.com/Script-Hub-Org/Script-Hub/raw/main/QX-Rewrite-Parser.js
+
+https?:\/\/script\.hub\/file\/_start_\/.+type=loon-plugin url script-request-header https://github.com/Script-Hub-Org/Script-Hub/raw/main/Loon-Rewrite-Parser.js
+
+https?:\/\/script\.hub\/file\/_start_\/.+type=surge-module url script-request-header https://github.com/Script-Hub-Org/Script-Hub/raw/main/Surge-Rewrite-Parser.js
+
+https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set url script-request-header https://github.com/Script-Hub-Org/Script-Hub/raw/main/rule-parser.js
+
+https?:\/\/script\.hub\/convert\/ url script-request-header https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js
+
+hostname = script.hub, *.script.hub

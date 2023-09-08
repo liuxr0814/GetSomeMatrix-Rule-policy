@@ -1,0 +1,6 @@
+#!name = MITM All
+#!desc = MITM All全部HTTPS流量
+#!author = N/A
+
+[MITM]
+hostname = -*.apple.com, -*.icloud.com, -*.mzstatic.com, -*.crashlytics.com, -*.facebook.com, -*.instagram.com, *

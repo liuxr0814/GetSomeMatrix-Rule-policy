@@ -1,0 +1,286 @@
+# 配置名称: Stash 配置
+# 配置作者: Centralmatrix9
+# 更新时间: 23-08-30 23:35
+
+# 订阅的信息
+subscribe-url: 🧸订阅链接🧸
+
+# 远程服务器
+proxy-providers:
+  Matrix:
+    url: 🧸订阅链接🧸
+    interval: 600
+
+# 日志级别
+log-level: info
+
+# 出站模式
+mode: rule
+
+# DNS
+dns:
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+# 代理策略组
+proxy-groups:
+  - name: 自行选择
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png
+    interval: 120
+    lazy: true
+    type: select
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+
+  - name: 苹果服务
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+    type: select
+    proxies: &proxies
+      - DIRECT
+      - 自行选择
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 韩国节点
+      - 狮城节点
+      - 美国节点
+
+  - name: 港台番剧
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/StreamingSE.png
+    type: select
+    proxies: &proxies
+      - DIRECT
+      - 自行选择
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 韩国节点
+      - 狮城节点
+      - 美国节点
+
+  - name: 国内影视
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/StreamingCN.png
+    type: select
+    proxies: &proxies
+      - DIRECT
+      - 自行选择
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 韩国节点
+      - 狮城节点
+      - 美国节点
+
+  - name: 国际媒体
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png
+    type: select
+    proxies: &proxies
+      - DIRECT
+      - 自行选择
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 韩国节点
+      - 狮城节点
+      - 美国节点
+
+  - name: 全球加速
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+    type: select
+    proxies: &proxies
+      - DIRECT
+      - 自行选择
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 韩国节点
+      - 狮城节点
+      - 美国节点
+
+  - name: 黑白名单
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
+    type: select
+    proxies: &proxies
+      - DIRECT
+      - 自行选择
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 日本节点
+      - 韩国节点
+      - 狮城节点
+      - 美国节点
+
+  - name: 自动选择
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: 香港节点
+    filter: "香港|港|HK|(?i)HongKong"
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: 台湾节点
+    filter: "台湾|台|TW|(?i)Taiwan"
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: 日本节点
+    filter: "日本|日|JP|(?i)Japan"
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: 韩国节点
+    filter: "韩国|韩|KR|(?i)SouthKorea"
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: 狮城节点
+    filter: "新加坡|新|SG|(?i)Singapore"
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+  - name: 美国节点
+    filter: "美国|美|US|(?i)UnitedStates"
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    include-all: true
+    hidden: null
+
+# 分流规则
+rules:
+  - RULE-SET, 规则修正, DIRECT
+  - RULE-SET, 广告拦截, REJECT
+  - RULE-SET, 网络测速, 全球加速
+  - RULE-SET, 国际抖音, 国际媒体
+  - RULE-SET, 国际媒体, 国际媒体
+  - RULE-SET, 港台番剧, 港台番剧
+  - RULE-SET, 国内影视, 国内影视
+  - RULE-SET, 全球加速, 全球加速
+  - RULE-SET, 苹果服务, 苹果服务
+  - RULE-SET, 局域网络, DIRECT
+  - GEOIP, CN, DIRECT
+  - MATCH,黑白名单
+
+# 远程规则
+rule-providers:
+  规则修正:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix9/GetSomeMatrix/Master/Clash/Ruleset/Unbreak.yaml
+
+  广告拦截:
+    behavior: domain
+    interval: 86400
+    url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+
+  网络测速:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix9/GetSomeMatrix/Master/Clash/Ruleset/Speedtest.yaml
+
+  国际抖音:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix9/GetSomeMatrix/Master/Clash/Ruleset/TikTok.yaml
+
+  国际媒体:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix9/GetSomeMatrix/Master/Clash/Ruleset/Streaming.yaml
+
+  港台番剧:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix9/GetSomeMatrix/Master/Clash/Ruleset/StreamingSE.yaml
+
+  国内影视:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix9/GetSomeMatrix/Master/Clash/Ruleset/StreamingCN.yaml
+
+  全球加速:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix9/GetSomeMatrix/Master/Clash/Ruleset/Global.yaml
+
+  苹果服务:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix9/GetSomeMatrix/Master/Clash/Ruleset/Apple.yaml
+
+  局域网络:
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/Centralmatrix9/GetSomeMatrix/Master/Stash/Ruleset/LAN.yaml
+
+# TF下载修正/443
+http:
+  script:
+    - match: ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$
+      name: "TF下载修正"
+      type: request
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+      binary-mode: false
+
+  shortcuts:
+    - quic: network == 'udp' and dst_port == 443
+
+  mitm:
+    - "testflight.apple.com"
+
+script-providers:
+  "TF下载修正":
+    url: https://raw.githubusercontent.com/Centralmatrix9/GetSomeMatrix/Master/Stash/Scripts/TF-Download.Js
+    interval: 86400

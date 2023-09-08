@@ -1,0 +1,33 @@
+#!name = Safari全能搜索H版
+#!desc = 关键词+空格+命令 搜索引擎: duckduckgo
+#!author = Treo6
+
+[URL Rewrite]
+^https:\/\/duckduckgo.com\/\?q=91\+([^&]+).+ https://91porn.com/search_result.php?search_id=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+91.+ https://91porn.com/search_result.php?search_id=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+ph.+ https://cn.pornhub.com/video/search?search=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=51\+([^&]+).+ https://51cg1.com/search/$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+51.+ https://51cg1.com/search/$1 302
+
+^https:\/\/duckduckgo.com\/\?q=cg\+([^&]+).+ https://chigua2.com/search/$1/ 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+cg.+ https://chigua2.com/search/$1/ 302
+
+^https:\/\/duckduckgo.com\/\?q=jab\+([^&]+).+ https://jable.tv/search/$1/ 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+jab.+ https://jable.tv/search/$1/ 302
+
+^https:\/\/duckduckgo.com\/\?q=hm\+([^&]+).+ https://hanime1.me/search?query=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+hm.+ https://hanime1.me/search?query=$1 302
+
+^https:\/\/duckduckgo.com\/\?q=91s\+([^&]+).+ https://cn1.91short.com/search?wd=$1 302
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+91s.+ https://cn1.91short.com/search?wd=$1 302
+
+^https?:\/\/duckduckgo\.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+^https?:\/\/duckduckgo\.com\/\?q=([^&]+)\+bd.+ https://www.baidu.com/s?wd=$1 302
+
+^https?:\/\/duckduckgo\.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
+
+[MITM]
+hostname = %APPEND% duckduckgo.com
