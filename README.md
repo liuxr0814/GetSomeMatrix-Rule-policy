@@ -117,6 +117,10 @@
 
    * [I-am-R-E](https://github.com/I-am-R-E)
 
+ * 配置文件
+
+   * [ddgksf2013](https://github.com/ddgksf2013)
+
  * 策略图标
 
    * [Orz-3](https://github.com/Orz-3)
